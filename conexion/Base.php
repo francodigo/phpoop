@@ -1,4 +1,5 @@
 <?php
+namespace CONEXION;
 class Base {
     private $host;
     private $user;
@@ -15,7 +16,7 @@ class Base {
      
     private function generarConexion(){
         try{
-         $this->pdo = new PDO($this->host,$this->user,$this->pwd);
+         $this->pdo = new \PDO($this->host,$this->user,$this->pwd);
         } catch (Exception $ex) {
             var_dump("Che, ,no anda");
             //header("Location: http://localhost/oop/proyecto/conexion/base.php");
